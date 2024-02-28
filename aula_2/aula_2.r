@@ -17,10 +17,19 @@ ex_13 <- function() {
   after_vector <- na.omit(data$Ex13Depois)
   # boxplot(before_vector, after_vector, names = c("Antes", "Depois"),
   #        horizontal = TRUE, main = "Eficácia das drogas", xlab = "Eficácia")
-  plot(before_vector, after_vector, main = "Eficácia das drogas", pch = 11,
+  plot(before_vector, after_vector, main = "Eficácia das drogas", pch = 19,
        col = "darkgreen")
   print(paste("The correlation coefficient is: "
               , cor(after_vector, before_vector)))
+}
+
+ex_15 <- function() {
+  x_vector <- na.omit(data$Ex15x)
+  y_vector <- na.omit(data$Ex15y)
+  plot(x_vector, y_vector, main = "Amostra Bivariada", pch = 19,
+       col = "darkgreen")
+  print(paste("The correlation coefficient is: "
+              , cor(x_vector, y_vector)))
 }
 
 ex_17 <- function() {
